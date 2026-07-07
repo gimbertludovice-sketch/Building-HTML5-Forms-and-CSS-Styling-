@@ -1,0 +1,155 @@
+/* General Page Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Container Styling */
+.container {
+    width: 100%;
+    max-width: 500px;
+}
+
+.form-wrapper {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    padding: 40px;
+    animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Heading Styling */
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 28px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+
+/* Form Group Styling */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Label Styling */
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+/* Input Field Styling */
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    background-color: #f9f9f9;
+}
+
+/* Input Focus State */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="date"]:focus,
+input[type="password"]:focus {
+    outline: none;
+    border-color: #667eea;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+/* Input Hover State */
+input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="date"]:hover,
+input[type="password"]:hover {
+    border-color: #667eea;
+}
+
+/* Required Attribute Styling */
+input:required {
+    border-left: 4px solid #ff6b6b;
+}
+
+/* Submit Button Styling */
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+/* Button Hover State */
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+/* Button Active State */
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .form-wrapper {
+        padding: 25px;
+    }
+    
+    h1 {
+        font-size: 24px;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    input[type="date"],
+    input[type="password"],
+    .submit-btn {
+        font-size: 16px;
+        padding: 10px 12px;
+    }
+}
